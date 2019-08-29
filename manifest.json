@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "Trello Daily Scrum Tool",
+  "version": "1.0",
+
+  "description": "Run your daily scrum meeting like a pro.",
+
+  "icons": {
+    "48": "icons/trello-daily-scrum-tool.png",
+    "96": "icons/trello-daily-scrum-tool@2x.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://trello.com/b/*"],
+      "js": ["jquery.js","trello-daily-scrum-tool.js"],
+      "css": ["trello-daily-scrum-tool.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
